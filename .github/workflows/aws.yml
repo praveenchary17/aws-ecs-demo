@@ -51,7 +51,7 @@ jobs:
         aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
       env:
         aws-access-key-id: ${{ github.event.inputs.environment }}_AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ github.event.inputs.environment }}.AWS_SECRET_ACCESS_KEY }} 
+        aws-secret-access-key: ${{ github.event.inputs.environment }}_AWS_SECRET_ACCESS_KEY }} 
 
     - name: Login to Amazon ECR
       id: login-ecr
