@@ -53,8 +53,8 @@ jobs:
     - name: Deploy Amazon ECS task definition
       uses: donaldpiret/ecs-deploy@master
       with:
-       cluster: theClusterName
-       target: theServiceName
+       cluster: aws-ecs-demo-cluster
+       target: sample-app-service
        tag: 8a7311c245bfc3398a485293520a735631ecda9e
        wait-for-service-stability: true
 
