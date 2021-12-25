@@ -25,10 +25,10 @@
 
 on:
   workflow_dispatch:
-    inputs:
-      environment:
-        description: Environment to deploy dev/stage/production
-        required: true 
+    #inputs:
+      #environment:
+        #description: Environment to deploy dev/stage/production
+        #required: true 
 
 name: Deploy to Amazon ECS
 
