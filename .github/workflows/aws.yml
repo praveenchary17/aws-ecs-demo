@@ -54,10 +54,7 @@ jobs:
 
       - name: run linux command
         run: pip install ecs-deploy
-        
-      - name ECS deploy
-        run: ecs deploy aws-ecs-demo-cluster sample-app-service --tag latest
-        
+                   
       - name: Build and redeploy
         uses: jaroldwong/ecr-push-and-ecs-deploy@v1.1
         with:
@@ -65,4 +62,5 @@ jobs:
           ecr-repository: 'aws-ecs-demo-ecr'
           ecs-cluster: 'aws-ecs-demo-cluster'
           ecs-service: 'sample-app-service'
+          
     
