@@ -52,6 +52,12 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
 
+      - name: run linux command
+        run: pip install ecs-deploy
+        
+      - name ECS deploy
+        run: ecs deploy aws-ecs-demo-cluster sample-app-service --tag latest
+        
       - name: Build and redeploy
         uses: jaroldwong/ecr-push-and-ecs-deploy@v1.1
         with:
